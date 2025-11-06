@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tietosuoja / Privacy — Laitilan FixIT</title>
+  <meta name="theme-color" content="#0b0f14" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html"><span class="orange">Laitilan</span> <span class="blue">FixIT</span></a>
+    <nav class="nav">
+      <a href="index.html#services" data-i18n="nav_services">Palvelut</a>
+      <a href="index.html#contact" data-i18n="nav_contact">Yhteys</a>
+      <a href="privacy.html" data-i18n="nav_privacy">Tietosuoja</a>
+    </nav>
+    <div class="lang-toggle">
+      <button id="lang-fi">FI</button>
+      <button id="lang-en">EN</button>
+    </div>
+  </header>
+
+  <main class="contact" style="padding-top:32px">
+    <h1 data-i18n="priv_title">Tietosuojaseloste / Privacy Policy</h1>
+    <p class="gdpr-hint" data-i18n="priv_intro">
+      Tämä sivu kuvaa, miten käsittelemme henkilötietoja palveluissamme (GDPR). This page explains how we process personal data under GDPR.
+    </p>
+
+    <section class="card" style="margin-top:16px">
+      <h2 data-i18n="priv_what_title">Mitä keräämme</h2>
+      <ul style="margin-left:18px;margin-top:8px">
+        <li data-i18n="priv_what_1">Yhteydenottolomakkeen tiedot: nimi, sähköposti, viesti, noutoaika.</li>
+        <li data-i18n="priv_what_2">Tekniset lokit turvallisuussyistä (esim. virhetilanteet).</li>
+        <li data-i18n="priv_what_3">Välttämättömät evästeet (kielivalinta).</li>
+      </ul>
+    </section>
+
+    <section class="card" style="margin-top:16px">
+      <h2 data-i18n="priv_why_title">Miksi keräämme</h2>
+      <ul style="margin-left:18px;margin-top:8px">
+        <li data-i18n="priv_why_1">Palvelun tarjoaminen ja yhteydenpito (nouto/korjaus).</li>
+        <li data-i18n="priv_why_2">Tietoturva ja väärinkäytösten estäminen.</li>
+        <li data-i18n="priv_why_3">Lakisääteiset velvoitteet.</li>
+      </ul>
+    </section>
+
+    <section class="card" style="margin-top:16px">
+      <h2 data-i18n="priv_share_title">Luovutammeko tietoja</h2>
+      <p data-i18n="priv_share_txt">
+        Emme myy tietoja. Käytämme EmailJS-palvelua lomakeviestien välitykseen; viestin sisältö kulkee palveluntarjoajan kautta.
+      </p>
+    </section>
+
+    <section class="card" style="margin-top:16px">
+      <h2 data-i18n="priv_rights_title">Oikeutesi</h2>
+      <ul style="margin-left:18px;margin-top:8px">
+        <li data-i18n="priv_rights_1">Tarkastus, oikaisu ja poistaminen (GDPR).</li>
+        <li data-i18n="priv_rights_2">Vastustaminen ja käsittelyn rajoittaminen.</li>
+        <li data-i18n="priv_rights_3">Valitus valvontaviranomaiselle.</li>
+      </ul>
+    </section>
+
+    <section class="card" style="margin-top:16px">
+      <h2 data-i18n="priv_contact_title">Yhteystiedot</h2>
+      <p>
+        Email: <a href="mailto:laitilanfixit@gmail.com">laitilanfixit@gmail.com</a> · WhatsApp:
+        <a href="https://wa.me/358403623662" target="_blank">+358 40 362 3662</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="socials">
+      <a href="https://www.instagram.com/laitilanfixit/" class="icon ig" target="_blank" title="Instagram">📷</a>
+      <a href="https://www.tiktok.com/@the_stefanel" class="icon tt" target="_blank" title="TikTok">🎵</a>
+      <a href="https://wa.me/358403623662" class="icon wa" target="_blank" title="WhatsApp">💬</a>
+    </div>
+    <p>© <span id="year"></span> Laitilan FixIT — <span data-i18n="footer_kevy">Toimii kevytyrittäjänä Suomen lain mukaisesti.</span></p>
+  </footer>
+
+  <a href="https://wa.me/358403623662" class="whatsapp-float" target="_blank" title="WhatsApp">💬</a>
+</body>
+</html>

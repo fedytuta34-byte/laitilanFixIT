@@ -1,0 +1,201 @@
+/* =========================
+   Laitilan FixIT - style.css
+   ========================= */
+
+/* ---- Theme tokens ---- */
+:root{
+  --orange:#ff8b2f;
+  --blue:#00c2ff;
+  --bg:#0b0f14;
+  --panel:#11161d;
+  --text:#e8eef5;
+  --muted:#9ca8b8;
+  --outline: rgba(0,194,255,.55);
+
+  /* brand accents for icons */
+  --ig-grad-1:#f9ce34;
+  --ig-grad-2:#ee2a7b;
+  --ig-grad-3:#6228d7;
+  --tt:#000000;
+  --wa:#25d366;
+
+  --radius:12px;
+  --shadow:0 6px 18px rgba(0,0,0,.35);
+}
+
+/* ---- Reset / base ---- */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family: Inter, Roboto, Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit}
+:focus-visible{
+  outline:2px solid var(--outline);
+  outline-offset:3px;
+  border-radius:8px;
+}
+
+/* ---- Header ---- */
+.site-header{
+  position:sticky; top:0; z-index:999;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:12px 20px; background:#090d12; border-bottom:1px solid rgba(255,255,255,.06);
+}
+.logo{font-size:20px;font-weight:800;letter-spacing:.2px}
+.orange{color:var(--orange)}
+.blue{color:var(--blue)}
+
+.nav{display:flex;gap:12px}
+.nav a{
+  color:var(--text);
+  text-decoration:none;
+  opacity:.9;
+  padding:6px 8px;
+  border-radius:8px;
+}
+.nav a:hover{opacity:1;color:var(--blue);background:rgba(255,255,255,.04)}
+
+.lang-toggle{display:flex;gap:8px}
+.lang-toggle button{
+  background:transparent;
+  color:var(--text);
+  border:1px solid rgba(255,255,255,.12);
+  padding:6px 10px; border-radius:8px; cursor:pointer; font-weight:600;
+}
+.lang-toggle button:hover{border-color:var(--blue);color:var(--blue)}
+
+/* ---- Hero ---- */
+.hero{max-width:900px;margin:0 auto;padding:60px 20px;text-align:center}
+.hero h2{font-size:32px;margin-bottom:10px;color:var(--orange)}
+.hero p{color:var(--muted);margin-bottom:24px}
+
+/* Buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:10px 18px;border:none;border-radius:10px;cursor:pointer;margin:4px;
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+.btn:active{transform:scale(.98)}
+.btn.primary{background:var(--blue);color:#001018;box-shadow:0 6px 16px rgba(0,194,255,.25)}
+.btn.primary:hover{box-shadow:0 10px 22px rgba(0,194,255,.32)}
+.btn.secondary{background:transparent;border:1px solid var(--blue);color:var(--blue)}
+.btn.secondary:hover{background:rgba(0,194,255,.06)}
+
+/* ---- Sections ---- */
+.services{padding:60px 20px;text-align:center}
+.services h2{font-size:26px}
+.cards{
+  margin-top:20px;
+  display:grid; gap:16px;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+}
+.card{
+  background:var(--panel);
+  padding:20px; border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  text-align:left;
+}
+.card h3{color:var(--blue);margin-bottom:6px}
+.card p{color:var(--text);opacity:.9}
+
+/* ---- Contact ---- */
+.contact{padding:60px 20px;max-width:900px;margin:0 auto}
+.contact h2{font-size:26px;margin-bottom:8px}
+.contact-info{margin-bottom:20px}
+.contact-info a{color:var(--blue);text-decoration:none}
+.contact-info a:hover{text-decoration:underline}
+
+form{
+  display:flex;flex-direction:column;gap:12px;
+  background:var(--panel);
+  padding:20px;border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+label{font-weight:600}
+input,textarea{
+  width:100%; padding:10px; border:none; border-radius:8px;
+  background:#0b0f14; color:#fff;
+}
+input::placeholder,textarea::placeholder{color:#98a5b6}
+button.btn.primary{align-self:flex-start}
+.gdpr-hint{font-size:13px;color:var(--muted)}
+.gdpr-hint a{color:var(--blue);text-decoration:none}
+.gdpr-hint a:hover{text-decoration:underline}
+
+/* ---- Map ---- */
+.map iframe{
+  width:100%; height:280px; border:0; border-radius:var(--radius);
+  margin-top:20px; box-shadow:var(--shadow);
+}
+
+/* ---- Footer ---- */
+.site-footer{
+  text-align:center; padding:30px 10px; color:var(--muted);
+  border-top:1px solid rgba(255,255,255,.06); margin-top:40px;
+}
+.socials{display:flex;justify-content:center;gap:12px;margin-bottom:12px}
+.icon{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:40px;height:40px;border-radius:50%;
+  text-decoration:none;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.08);
+  transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+}
+.icon svg{width:20px;height:20px;fill:#fff;opacity:.95}
+.icon:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(0,0,0,.35)}
+.icon.ig{background:linear-gradient(135deg,var(--ig-grad-1),var(--ig-grad-2) 60%,var(--ig-grad-3));border:none}
+.icon.tt{background:#111;border:1px solid rgba(255,255,255,.08)}
+.icon.wa{background:var(--wa);border:none}
+
+/* ---- Floating WhatsApp ---- */
+.whatsapp-float{
+  position:fixed; bottom:22px; right:22px;
+  width:56px;height:56px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:26px; background:var(--wa); color:#fff; text-decoration:none;
+  box-shadow:0 6px 20px rgba(0,0,0,.4); z-index:1000;
+  transition:transform .15s ease;
+}
+.whatsapp-float:hover{transform:scale(1.08)}
+
+/* ---- Toast (message box) ---- */
+#toast{
+  position:fixed; left:50%; bottom:24px; transform:translateX(-50%) translateY(20px);
+  min-width:220px; max-width:92vw;
+  background:#0f1720; color:#e6f4ff;
+  border:1px solid rgba(0,194,255,.35);
+  padding:12px 16px; border-radius:10px; box-shadow:0 12px 40px rgba(0,0,0,.5);
+  opacity:0; pointer-events:none; transition:.25s all ease; z-index:1100;
+}
+#toast.show{opacity:1; transform:translateX(-50%) translateY(0)}
+#toast.error{border-color:#ff8b2f;color:#fff}
+
+/* ---- Utilities ---- */
+.small{font-size:.9rem}
+.muted{color:var(--muted)}
+.link{color:var(--blue);text-decoration:none}
+.link:hover{text-decoration:underline}
+
+/* ---- Responsive tweaks ---- */
+@media (max-width:900px){
+  .hero{padding-top:42px}
+}
+@media (max-width:600px){
+  .hero h2{font-size:26px}
+  .site-header{flex-wrap:wrap;gap:10px}
+  .nav{order:3;width:100%;justify-content:center;margin-top:6px}
+}
+
+/* ---- Motion preference ---- */
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;scroll-behavior:auto!important}
+}
